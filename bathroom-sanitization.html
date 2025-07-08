@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bathroom Sanitization Services - PCD MoveInReady Inc.</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Base & reset */
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #fff;
+  }
+  /* Moving background (same as homepage) */
+  #bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 200%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') repeat-x;
+    background-size: cover;
+    animation: moveBg 60s linear infinite;
+    z-index: -2;
+  }
+  #overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(245,245,245,0.75);
+    z-index: -1;
+  }
+  #content {
+    position: relative;
+    z-index: 0;
+    max-width: 960px;
+    margin: 0 auto 4rem;
+    padding: 2rem 3rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+    flex: 1 0 auto;
+  }
+
+  @keyframes moveBg {
+    0% { background-position: 0 0; }
+    100% { background-position: -100% 0; }
+  }
+
+  /* Header styles - same as homepage */
+  header {
+    background: #800020;
+    color: #f5f5f5;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid #d4a017;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    justify-content: flex-start;
+    border-radius: 8px 8px 0 0;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #d4a017;
+  }
+
+  /* Content headings and text */
+  h2 {
+    color: #800020;
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    color: #800020;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  p.lead {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+    color: #333333;
+  }
+  p {
+    color: #555555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    color: #555555;
+    font-size: 1.15rem;
+  }
+  ul li {
+    margin-bottom: 1.4rem;
+    padding-left: 2.5rem;
+    position: relative;
+  }
+  ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #d4a017;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  /* Button styling like homepage .btn-primary */
+  .btn-primary {
+    background: #d4a017;
+    color: #800020;
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+  }
+  .btn-primary:hover {
+    background: #b8860b;
+    color: #f5f5f5;
+  }
+
+  /* Footer - same as homepage */
+  footer {
+    background: #800020;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 1rem 1rem;
+    border-top: 3px solid #d4a017;
+    border-radius: 0 0 8px 8px;
+    flex-shrink: 0;
+  }
+  footer nav a {
+    color: #d4a017;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0.75rem;
+    transition: color 0.3s ease;
+  }
+  footer nav a:hover {
+    color: #f5f5f5;
+  }
+  footer p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    #content {
+      padding: 1.5rem 1.5rem;
+      margin-bottom: 3rem;
+    }
+    header {
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    nav {
+      gap: 1rem;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="bg"></div>
+<div id="overlay"></div>
+
+<div id="content">
+  <header>
+    <h1>PCD MoveInReady Inc.</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Bathroom Sanitization Services</h2>
+
+    <p class="lead">
+      Bathrooms require special attention to ensure they are hygienic, fresh, and safe. At PCD MoveInReady Inc., our professional bathroom sanitization service targets all surfaces to eliminate bacteria, viruses, mold, and unpleasant odors, giving you a spotless and healthy space.
+    </p>
+
+    <h3>Why Bathroom Sanitization is Important</h3>
+    <p>
+      Bathrooms are high-traffic, moisture-rich environments that can harbor germs and allergens if not properly cleaned. Regular sanitization helps prevent the spread of illnesses and keeps your family safe. Our thorough cleaning ensures sinks, toilets, showers, tubs, tiles, and fixtures are disinfected and shining.
+    </p>
+
+    <h3>Our Bathroom Sanitization Process</h3>
+    <ul>
+      <li>Removal of surface dirt, grime, soap scum, and mildew</li>
+      <li>Disinfection of all high-touch areas including faucets, handles, and light switches</li>
+      <li>Deep cleaning of toilets, showers, tubs, and sinks with hospital-grade sanitizers</li>
+      <li>Scrubbing and sanitizing tiles, grout, and flooring to prevent mold and mildew</li>
+      <li>Deodorizing the entire bathroom for a fresh and clean scent</li>
+      <li>Polishing mirrors, fixtures, and chrome for a sparkling finish</li>
+    </ul>
+
+    <h3>Benefits of Our Service</h3>
+    <ul>
+      <li>Creates a safer, germ-free bathroom environment</li>
+      <li>Prevents mold growth and eliminates allergens</li>
+      <li>Enhances the look and feel of your bathroom</li>
+      <li>Extends the life of bathroom surfaces and fixtures</li>
+      <li>Provides peace of mind with professional-grade sanitation</li>
+    </ul>
+
+    <h3>Flexible Scheduling & Customized Plans</h3>
+    <p>
+      We offer flexible appointment times tailored to your schedule, whether it’s a one-time deep cleaning or regular maintenance. Our customizable plans fit your needs and budget, ensuring your bathroom stays hygienic all year round.
+    </p>
+
+    <a href="contact.html" class="btn-primary" aria-label="Contact PCD MoveInReady Inc. for Bathroom Sanitization Services">Schedule Your Bathroom Sanitization Today</a>
+  </main>
+</div>
+
+<footer>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="services.html">Services</a> |
+    <a href="policies.html">Policies</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p>&copy; 2025 PCD MoveInReady Inc. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

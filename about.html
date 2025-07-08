@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About Us - PCD MoveInReady Inc.</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  /* Moving background */
+  #bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 200%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') repeat-x;
+    background-size: cover;
+    animation: moveBg 60s linear infinite;
+    z-index: -2;
+  }
+  /* Overlay for readability */
+  #overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(245,245,245,0.75);
+    z-index: -1;
+  }
+  /* Content container */
+  #content {
+    position: relative;
+    z-index: 0;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 2rem 3rem;
+    flex: 1 0 auto;
+  }
+  @keyframes moveBg {
+    0% { background-position: 0 0; }
+    100% { background-position: -100% 0; }
+  }
+
+  /* Header styles */
+  header {
+    background: #800020;
+    color: #f5f5f5;
+    padding: 1rem 0;
+    border-bottom: 3px solid #d4a017;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    justify-content: flex-start;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #d4a017;
+  }
+  nav a[aria-current="page"], nav a.active {
+    color: #d4a017;
+    text-decoration: underline;
+  }
+
+  /* Main styles */
+  main {
+    margin: 2rem 0 4rem;
+  }
+
+  /* Page specific content styling */
+  h2 {
+    color: #800020;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  p.intro, p.about-text, .extra-info p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Features grid */
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .feature-box {
+    background: #f9f3e7;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 12px rgb(212 160 23 / 0.3);
+    text-align: center;
+    color: #4a4a4a;
+  }
+  .feature-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    fill: #d4a017;
+  }
+  .feature-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #800020;
+  }
+  .feature-text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Founder section */
+  .founder-section {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #fff3d4;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgb(212 160 23 / 0.25);
+  }
+  .founder-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(212,160,23,0.6);
+  }
+  .founder-info {
+    flex: 1;
+    color: #555;
+  }
+  .founder-info h3 {
+    margin: 0 0 0.25rem;
+    color: #800020;
+    font-size: 1.4rem;
+  }
+  .founder-info p {
+    margin: 0.25rem 0;
+    font-size: 1.05rem;
+  }
+
+  /* Extra info section */
+  .extra-info {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #444;
+    text-align: center;
+  }
+
+  /* Footer */
+  footer {
+    background: #800020;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 1rem 1rem;
+    border-top: 3px solid #d4a017;
+    flex-shrink: 0;
+  }
+  footer nav a {
+    color: #d4a017;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0.75rem;
+    transition: color 0.3s ease;
+  }
+  footer nav a:hover {
+    color: #f5f5f5;
+  }
+  footer p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .founder-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .founder-info {
+      margin-top: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="bg"></div>
+<div id="overlay"></div>
+
+<div id="content">
+
+<header>
+  <h1>PCD MoveInReady Inc.</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" aria-current="page" class="active">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h2>About PCD MoveInReady Inc.</h2>
+  <p class="intro">We specialize in move-in ready cleaning designed to help homeowners and real estate professionals prepare homes that impress. Our service is built on understanding your needs and delivering quality every time.</p>
+
+  <p class="about-text">
+    At PCD MoveInReady Inc., we understand the stress and time constraints involved in moving. That’s why we’re committed to providing reliable, thorough cleaning services tailored specifically to the moving process. From sanitizing bathrooms and kitchens to deep floor care, our goal is to ensure every property is spotless, fresh, and welcoming.
+  </p>
+
+  <p class="about-text">
+    Our team uses eco-friendly cleaning products and modern techniques to deliver exceptional results while caring for your home and the environment. Whether you are a homeowner preparing to sell, a renter moving out, or a family moving in, we work with you to meet your schedule and expectations.
+  </p>
+
+  <section class="features" aria-label="Key reasons to choose PCD MoveInReady Inc.">
+    <article class="feature-box" tabindex="0">
+      <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M32 3a29 29 0 1029 29A29.033 29.033 0 0032 3zm0 54a25 25 0 1125-25 25.028 25.028 0 01-25 25z"/><path d="M31 16h2v17h-2zM31 37h2v11h-2z"/></svg>
+      <h3 class="feature-title">Reliable Service</h3>
+      <p class="feature-text">We understand timing is critical in real estate. Count on us for punctual, consistent cleaning to meet your deadlines.</p>
+    </article>
+    <article class="feature-box" tabindex="0">
+      <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M32 8a24 24 0 1024 24A24.027 24.027 0 0032 8zm0 44a20 20 0 1120-20 20.023 20.023 0 01-20 20z"/><path d="M44 22H20a2 2 0 00-2 2v16a2 2 0 002 2h24a2 2 0 002-2V24a2 2 0 00-2-2zm-1 16H21V25h22z"/></svg>
+      <h3 class="feature-title">Attention to Detail</h3>
+      <p class="feature-text">Every corner, floor, and surface gets the care it deserves so your property looks its absolute best.</p>
+    </article>
+    <article class="feature-box" tabindex="0">
+      <svg class="feature-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M32 2a30 30 0 1030 30A30.034 30.034 0 0032 2zm0 54a24 24 0 1124-24 24.028 24.028 0 01-24 24z"/><path d="M39 28a7 7 0 11-7-7 7.008 7.008 0 017 7z"/><path d="M32 44a13 13 0 0113-13v6a7 7 0 00-7 7z"/></svg>
+      <h3 class="feature-title">Client Focused</h3>
+      <p class="feature-text">Your satisfaction is our priority. We listen carefully and adapt to your unique needs every time.</p>
+    </article>
+  </section>
+
+  <section class="extra-info">
+    <h3>Our Commitment to You</h3>
+    <p>
+      We believe that a clean home sets the stage for a fresh start. That's why we are committed to excellence, professionalism, and eco-conscious cleaning practices. Our friendly team is trained to deliver consistent, high-quality results so you can focus on what matters most during your move.
+    </p>
+  </section>
+
+  <section class="founder-section" aria-label="Founder information">
+    <img src="images/1471353.jpg" alt="Philip Derick" class="founder-photo" />
+    <div class="founder-info">
+      <h3>Philip Derick</h3>
+      <p>Founder & Owner</p>
+      <p>With experience in real estate and a passion for helping people, Philip saw a need for reliable cleaning services that meet the high standards of the moving process. He founded PCD MoveInReady Inc. to provide trusted, quality cleaning tailored to help clients start fresh in their new homes.</p>
+      <p>Philip leads the company with a client-first approach, ensuring every home is ready for its next chapter with care and attention.</p>
+    </div>
+  </section>
+</main>
+
+</div>
+
+<footer>
+  <nav>
+    <a href="index.html">Home</a>|
+    <a href="about.html" aria-current="page" class="active">About Us</a>|
+    <a href="services.html">Services</a>|
+    <a href="policies.html">Policies</a>|
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p>&copy; 2025 PCD MoveInReady Inc. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us - PCD MoveInReady Inc.</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #fafafa;
+  }
+  /* Moving background */
+  #bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 200%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') repeat-x;
+    background-size: cover;
+    animation: moveBg 60s linear infinite;
+    z-index: -2;
+  }
+  /* Overlay for readability */
+  #overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(245,245,245,0.75);
+    z-index: -1;
+  }
+  /* Content container */
+  #content {
+    position: relative;
+    z-index: 0;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 2rem 3rem;
+    flex: 1 0 auto;
+  }
+  @keyframes moveBg {
+    0% { background-position: 0 0; }
+    100% { background-position: -100% 0; }
+  }
+
+  /* Header styles */
+  header {
+    background: #800020;
+    color: #f5f5f5;
+    padding: 1rem 0;
+    border-bottom: 3px solid #d4a017;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    justify-content: flex-start;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #d4a017;
+  }
+  nav a[aria-current="page"], nav a.active {
+    color: #d4a017;
+    text-decoration: underline;
+  }
+
+  /* Main styles */
+  main {
+    margin: 2rem 0 4rem;
+  }
+  h2 {
+    color: #800020;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  /* Contact info */
+  .contact-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(212,160,23,0.2);
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  .contact-info strong {
+    color: #800020;
+  }
+  .contact-info a {
+    color: #800020;
+    text-decoration: none;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  /* Form styles */
+  form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(212,160,23,0.2);
+  }
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #800020;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  input:focus, textarea:focus {
+    border-color: #d4a017;
+    outline: none;
+    box-shadow: 0 0 8px #d4a017;
+  }
+
+  button {
+    background: #d4a017;
+    color: #800020;
+    font-weight: 700;
+    border: none;
+    padding: 0.75rem 2.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  button:hover {
+    background: #b8860b;
+    color: #f5f5f5;
+  }
+
+  /* Footer */
+  footer {
+    background: #800020;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 1rem 1rem;
+    border-top: 3px solid #d4a017;
+    flex-shrink: 0;
+  }
+  footer nav {
+    margin-bottom: 0.5rem;
+  }
+  footer nav a {
+    color: #d4a017;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0.75rem;
+    transition: color 0.3s ease;
+  }
+  footer nav a:hover {
+    color: #f5f5f5;
+  }
+  footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    nav {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 600px) {
+    form, .contact-info {
+      padding: 1.5rem 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="bg"></div>
+<div id="overlay"></div>
+
+<div id="content">
+
+<header>
+  <h1>PCD MoveInReady Inc.</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html" aria-current="page" class="active">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Contact Us</h2>
+
+  <section class="contact-info" aria-label="Company contact information">
+    <p><strong>Address:</strong> 211 Besserer St, Unit R1801, Ottawa, ON, K1N 0G2, Canada</p>
+    <p><strong>Email:</strong> <a href="mailto:pcdmoveinready@outlook.com">pcdmoveinready@outlook.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+16139012222">613-901-2222</a></p>
+  </section>
+
+  <section aria-label="Contact form">
+    <form action="#" method="POST">
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Optional" />
+
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+
+      <button type="submit" aria-label="Send message">Send Message</button>
+    </form>
+  </section>
+</main>
+
+</div>
+
+<footer>
+  <nav>
+    <a href="index.html">Home</a>|
+    <a href="about.html">About Us</a>|
+    <a href="services.html">Services</a>|
+    <a href="policies.html">Policies</a>|
+    <a href="contact.html" aria-current="page" class="active">Contact</a>
+  </nav>
+  <p>&copy; 2025 PCD MoveInReady Inc. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Appliance Cleaning Services - PCD MoveInReady Inc.</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #333333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  /* Moving background */
+  #bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 200%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') repeat-x;
+    background-size: cover;
+    animation: moveBg 60s linear infinite;
+    z-index: -2;
+  }
+  /* Overlay for readability */
+  #overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(245,245,245,0.75);
+    z-index: -1;
+  }
+  /* Content container */
+  #content {
+    position: relative;
+    z-index: 0;
+    max-width: 960px;
+    margin: 2rem auto 4rem;
+    padding: 1rem 2rem;
+    flex: 1 0 auto;
+  }
+
+  @keyframes moveBg {
+    0% { background-position: 0 0; }
+    100% { background-position: -100% 0; }
+  }
+
+  /* Header */
+  header {
+    background: #800020;
+    color: #f5f5f5;
+    padding: 1rem 0;
+    border-bottom: 3px solid #d4a017;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    justify-content: flex-start;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #d4a017;
+  }
+
+  /* Main content */
+  main {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+    color: #333;
+  }
+  main h2 {
+    color: #800020;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  main p.lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #555;
+  }
+  main p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #444;
+  }
+  .image-container {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .image-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  }
+
+  /* Button styled like homepage primary */
+  .btn-primary {
+    background: #d4a017;
+    color: #800020;
+    padding: 0.75rem 2.5rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1.5rem auto 0;
+    display: block;
+    width: max-content;
+  }
+  .btn-primary:hover {
+    background: #b8860b;
+    color: #f5f5f5;
+  }
+
+  /* Footer */
+  footer {
+    background: #800020;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 1rem 1rem;
+    border-top: 3px solid #d4a017;
+    flex-shrink: 0;
+  }
+  footer nav a {
+    color: #d4a017;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0.75rem;
+    transition: color 0.3s ease;
+  }
+  footer nav a:hover {
+    color: #f5f5f5;
+  }
+  footer p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    main {
+      padding: 1.5rem 1rem;
+    }
+    header {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav {
+      gap: 1rem;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="bg"></div>
+<div id="overlay"></div>
+
+<div id="content">
+  <header>
+    <h1>PCD MoveInReady Inc.</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Appliance Cleaning Services</h2>
+    <p class="lead">
+      Keeping your home’s appliances clean is essential for hygiene, efficiency, and prolonging their lifespan. Our professional appliance cleaning service targets common household appliances such as ovens, refrigerators, microwaves, and dishwashers, removing dirt, grease, and grime to restore their shine and ensure they function at their best.
+    </p>
+
+    <div class="image-container">
+      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=960&q=80" alt="Professional cleaning kitchen appliances" />
+    </div>
+
+    <p>
+      We use eco-friendly, non-toxic cleaning products safe for your family and pets. Our trained technicians meticulously clean all accessible surfaces, vents, and seals, tackling built-up grease and stains that ordinary cleaning might miss. Whether you're preparing your home for a sale or just want to maintain a spotless living space, our appliance cleaning service delivers outstanding results.
+    </p>
+
+    <p>
+      With flexible scheduling and customized cleaning plans, we make sure your appliances are spotless and ready for daily use.
+    </p>
+
+    <a href="contact.html" class="btn-primary" aria-label="Contact PCD MoveInReady Inc. for Appliance Cleaning Services">Schedule Appliance Cleaning</a>
+  </main>
+</div>
+
+<footer>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="services.html">Services</a> |
+    <a href="policies.html">Policies</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p>&copy; 2025 PCD MoveInReady Inc. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

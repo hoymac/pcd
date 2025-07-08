@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dusting & Surface Cleaning - PCD MoveInReady Inc.</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+<style>
+  body, html {
+    margin: 0; padding: 0; min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  #bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 200%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') repeat-x;
+    background-size: cover;
+    animation: moveBg 60s linear infinite;
+    z-index: -2;
+  }
+  #overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(245,245,245,0.75);
+    z-index: -1;
+  }
+
+  @keyframes moveBg {
+    0% { background-position: 0 0; }
+    100% { background-position: -100% 0; }
+  }
+
+  header {
+    background: #800020;
+    color: #f5f5f5;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid #d4a017;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    border-radius: 8px 8px 0 0;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+  nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #d4a017;
+  }
+
+  #content {
+    position: relative;
+    z-index: 0;
+    max-width: 960px;
+    margin: 3rem auto 4rem;
+    padding: 2rem 3rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+    flex: 1 0 auto;
+  }
+
+  h2 {
+    color: #800020;
+    font-weight: 700;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  p.lead {
+    font-size: 1.2rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.3rem;
+    color: #555;
+  }
+
+  .image-container {
+    max-width: 960px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  .image-container img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background-color: #d4a017;
+    color: #800020;
+    font-weight: 700;
+    padding: 16px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .btn-primary:hover {
+    background-color: #b8860b;
+    color: #f5f5f5;
+  }
+
+  footer {
+    background: #800020;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    border-top: 3px solid #d4a017;
+    margin-top: auto;
+    border-radius: 0 0 8px 8px;
+  }
+  footer nav a {
+    color: #d4a017;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 0.75rem;
+    transition: color 0.3s ease;
+  }
+  footer nav a:hover {
+    color: #f5f5f5;
+  }
+  footer p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    #content {
+      padding: 1.5rem 1.5rem;
+      margin: 2rem auto 3rem;
+    }
+    header {
+      flex-wrap: wrap;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    nav {
+      gap: 1rem;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="bg"></div>
+<div id="overlay"></div>
+
+<header>
+  <h1>PCD MoveInReady Inc.</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div id="content">
+  <h2>Dusting & Surface Cleaning</h2>
+  <p class="lead">
+    Maintain a fresh, dust-free home environment with our comprehensive dusting and surface cleaning service. We target all surfaces to remove dust, allergens, and debris, helping to improve indoor air quality and create a healthier living space.
+  </p>
+
+  <div class="image-container">
+    <img src="https://images.unsplash.com/photo-1581579184631-57f9f02e37d4?auto=format&fit=crop&w=960&q=80" alt="Person dusting furniture" />
+  </div>
+
+  <p>
+    Our trained cleaning professionals meticulously dust and wipe down surfaces including shelves, furniture, baseboards, light fixtures, blinds, and decorative items. Using gentle, safe cleaning products, we ensure your home stays spotless without damaging delicate materials.
+  </p>
+
+  <p>
+    Perfect for pre-listing preparation or routine maintenance, our dusting and surface cleaning service helps you maintain a pristine home environment that welcomes family, guests, and prospective buyers.
+  </p>
+
+  <a href="contact.html" class="btn-primary" aria-label="Contact PCD MoveInReady Inc. for Dusting and Surface Cleaning">Book Dusting & Surface Cleaning</a>
+</div>
+
+<footer>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="services.html">Services</a> |
+    <a href="policies.html">Policies</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p>&copy; 2025 PCD MoveInReady Inc. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
