@@ -17,7 +17,6 @@
     min-height: 100vh;
     background: #fafafa;
   }
-  /* Moving background */
   #bg {
     position: fixed;
     top: 0; left: 0;
@@ -28,7 +27,6 @@
     animation: moveBg 60s linear infinite;
     z-index: -2;
   }
-  /* Overlay for readability */
   #overlay {
     position: fixed;
     top: 0; left: 0;
@@ -36,7 +34,6 @@
     background: rgba(245,245,245,0.75);
     z-index: -1;
   }
-  /* Content container */
   #content {
     position: relative;
     z-index: 0;
@@ -50,7 +47,6 @@
     100% { background-position: -100% 0; }
   }
 
-  /* Header styles */
   header {
     background: #800020;
     color: #f5f5f5;
@@ -87,7 +83,6 @@
     text-decoration: underline;
   }
 
-  /* Main styles */
   main {
     margin: 2rem 0 4rem;
   }
@@ -99,7 +94,6 @@
     text-align: center;
   }
 
-  /* Contact info */
   .contact-info {
     background: white;
     padding: 2rem;
@@ -121,7 +115,6 @@
     text-decoration: underline;
   }
 
-  /* Form styles */
   form {
     background: white;
     padding: 2rem;
@@ -167,7 +160,6 @@
     color: #f5f5f5;
   }
 
-  /* Footer */
   footer {
     background: #800020;
     color: #f5f5f5;
@@ -194,7 +186,6 @@
     font-size: 0.9rem;
   }
 
-  /* Responsive */
   @media (max-width: 720px) {
     nav {
       justify-content: center;
@@ -229,12 +220,12 @@
 
   <section class="contact-info" aria-label="Company contact information">
     <p><strong>Address:</strong> 211 Besserer St, Unit R1801, Ottawa, ON, K1N 0G2, Canada</p>
-    <p><strong>Email:</strong> <a href="mailto:pcdmoveinready@outlook.com">pcdmoveinready@outlook.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:+16139012222">613-901-2222</a></p>
+    <p><strong>Email:</strong> <a href="mailto:philip@pcdmoveinready.com">philip@pcdmoveinready.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+16136176154">613-617-6154</a></p>
   </section>
 
   <section aria-label="Contact form">
-    <form action="#" method="POST">
+    <form action="https://formspree.io/f/your-form-id" method="POST">
       <label for="name">Name *</label>
       <input type="text" id="name" name="name" required placeholder="Your full name" />
 
@@ -247,6 +238,7 @@
       <label for="message">Message *</label>
       <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
 
+      <input type="text" name="_gotcha" style="display:none" />
       <button type="submit" aria-label="Send message">Send Message</button>
     </form>
   </section>
